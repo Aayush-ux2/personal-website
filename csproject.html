@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aayush Khanal - Aspiring Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --primary: #1a2238;
+      --secondary: #9daaf2;
+      --accent: #ff6a3d;
+      --bg: #f4f4f4;
+      --text: #222;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 2rem 1rem 3rem 1rem;
+      text-align: left;
+      position: relative;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 5px solid var(--accent);
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      margin-right: 2rem;
+      margin-top: 10px;
+      margin-bottom: 0.5rem;
+      flex-shrink: 0;
+    }
+    .header-info {
+      flex: 1;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      text-align: left;
+    }
+    nav {
+      margin: 1.5rem 0 0.5rem 0;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1.2rem 0 0;
+      font-size: 1rem;
+      transition: color 0.2s, border-bottom 0.2s;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+    }
+    nav a.active, nav a:focus {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    main {
+      max-width: 800px;
+      margin: -50px auto 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+      padding: 2rem;
+      position: relative;
+      min-height: 350px;
+    }
+    section {
+      margin-bottom: 2.5rem;
+      display: none; 
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.4s, transform 0.4s;
+      animation: fadeIn 0.5s;
+    }
+    section.active-section {
+      display: block;
+      opacity: 1;
+      transform: none;
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(16px);}
+      to {opacity: 1; transform: none;}
+    }
+    section h2 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .about-text {
+      font-size: 1.08rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+    .expertise-list {
+      list-style: disc inside;
+      margin-left: 1.2rem;
+    }
+    .contact-block {
+      background: var(--secondary);
+      color: var(--primary);
+      border-radius: 10px;
+      padding: 1.1rem 1rem;
+      font-size: 1.08rem;
+      margin-top: 1rem;
+    }
+    .contact-block a {
+      color: var(--primary);
+      text-decoration: underline;
+      font-weight: 500;
+      word-break: break-all;
+    }
+    .contact-icon {
+      vertical-align: middle;
+      margin-right: 0.5em;
+      font-size: 1.2em;
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .header-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .profile-img {
+        margin: -60px 0 1rem 0;
+      }
+      .header-info {
+        text-align: center;
+      }
+      nav {
+        text-align: center;
+      }
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem;
+        border-radius: 0;
+        margin-top: -35px;
+      }
+      .profile-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        margin-top: -40px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      section h2 {
+        font-size: 1.18rem;
+      }
+      nav a {
+        margin: 0 0.7rem 0 0;
+        font-size: 0.98rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-flex">
+      <img class="profile-img" src="don aayush.png" alt="Aayush Khanal's Profile Photo">
+      <div class="header-info">
+        <h1>Aayush Khanal</h1>
+        <div class="tagline">Aspiring Web Developer</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="active-section">
+      
+      <h2>Welcome</h2>
+      <div class="about-text">
+        Hello, I'm <strong>Aayush Khanal</strong>.<br>
+        Welcome to my personal website! <br>
+        My final year project!
+      </div>
+    </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-text">
+        Hello, my name is Aayush Khanal. I am currently a student at Arniko High School, where I am pursuing my grade 11 curremtly. Driven by a deep curiosity and enthusiasm for the rapidly evolving world of technology, I have consistently focused my studies on computer science and innovative advancements in the tech industry.<br><br>
+        Originally from Itahari-4, Sunsari, I am passionate about exploring new ideas and pushing the boundaries of what technology can achieve. In addition to my academic interests, I have a strong fascination for physics and enjoy investigating the principles that govern our universe. Outside of the classroom, I find creative fulfillment in music, particularly through playing the guitar, which allows me to balance my analytical pursuits with artistic expression.
+      </div>
+    </section>
+    <section id="expertise">
+      <h2>Expertise</h2>
+      <ul class="expertise-list">
+        <li>Foundational knowledge of <strong>HTML</strong> and <strong>CSS</strong> for web design and layout</li>
+        <li>Experience with <strong>Tailwind CSS</strong> for efficient and modern UI development</li>
+        <li>Programming in <strong>QBasic</strong> and <strong>C</strong>, developing problem-solving and algorithmic skills</li>
+        <li>Continual learning and adaptation to new technologies and best practices in computer science</li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-block">
+        <div><span class="contact-icon">✉️</span>
+          <strong>Email:</strong> <a href="mailto:aayush254khanal@gmail.com">aayush254khanal@gmail.com</a>
+        </div>
+        <div style="margin-top:0.5em;"><span class="contact-icon">📞</span>
+          <strong>Phone:</strong> <a href="tel:9742292383">9742292383</a>
+        </div>
+        <div style="margin-top:0.5em;"><span class="contact-icon">📷</span>
+          <strong>Instagram:</strong> <a href="https://www.instagram.com/aayushkhanal_2/" target="_blank">@aayushkhanal_2</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+   
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('main section');
+
+    function showSection(hash) {
+      let found = false;
+      sections.forEach(section => {
+        if ('#' + section.id === hash) {
+          section.classList.add('active-section');
+          found = true;
+        } else {
+          section.classList.remove('active-section');
+        }
+      });
+
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === hash) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+      
+      if (!found) {
+        document.getElementById('home').classList.add('active-section');
+        navLinks[0].classList.add('active');
+      }
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const hash = this.getAttribute('href');
+        history.pushState(null, '', hash);
+        showSection(hash);
+      });
+    });
+
+    window.addEventListener('popstate', () => {
+      showSection(window.location.hash || '#home');
+    });
+
+    showSection(window.location.hash || '#home');
+  </script>
+</body>
+</html>
